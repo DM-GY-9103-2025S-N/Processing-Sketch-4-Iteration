@@ -2,14 +2,15 @@
 void setup() {
   size(400,400);
   background(255);
-  noLoop(); // use noLoop() so the drawing does not run continously
+  // use noLoop() so the drawing does not run continously
+  noLoop(); 
 }
 
 void draw() {
-  // moving the colors into the draw function
   stroke(0);
   line(0,0,400,400);
   fill(150,0,150);
+  // An ellipse with equal height and width ... is a circle!
   ellipse(200,200,100,100);
   /* setting up the ellipse parameters as integer variables: */
   int x = 200;
@@ -22,7 +23,8 @@ void draw() {
     y = y-25;
     w = w-10;
     h = h-10;
-    // print the variables at each iteration for debugging purposes:
+    // Print the variables at each iteration for debugging purposes.
+    // These values show up in the Console window below the code.
     print("Iteration #",i," values: x: ",x," y: ",y," w: ",w," h: ",h,"\n");
     ellipse(x,y,w,h);
   } 
